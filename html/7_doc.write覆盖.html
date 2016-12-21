@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>已加载完成的头部</h1>
+<p>已加载完成的内容</p>
+<button type="button" onclick="myFunction()">click here </button>
+<script>
+function myFunction(){
+	document.write("oh ！原来内容消失了，覆盖了原内容");
+}
+</script>
+<!--document.write()仅使用在文档直接输出写内容，不能在页面已经加载后，调取script功能时，再执行，否则原内容被覆盖-->
+</body>
+</html>
