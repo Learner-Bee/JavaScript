@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<p id="demo"></p>
+<button onclick="myFunction()">click here</button>
+<script>
+function myFunction(){
+	var x;
+	var time=new Date().getDay();
+	switch(time){
+		case 0:
+		 x="Sunday";
+		 break;
+		case 6:
+		 x="Saturday";
+		 break;
+		default:
+		 x="workday";
+
+	}
+	document.getElementById("demo").innerHTML=x;
+}
+
+</script>
+</body>
+</html>
