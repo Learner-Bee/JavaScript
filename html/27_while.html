@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<button onclick="myFunction()">click here</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+	var x="",i=0;
+	//指定条件为真时，执行代码块
+	while(i<5){
+		x=x+"the number is "+i+"</br>";
+		i++;
+	}
+	document.getElementById("demo").innerHTML=x;
+}
+</script>
+</body>
+</html>

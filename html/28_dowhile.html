@@ -1,0 +1,17 @@
+<!DOCTTYPE HTML>
+<html>
+<body>
+<button onclick="myFunction()">click here </button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+	var x="",i=0;
+	do{
+		x=x+"the number is "+i+"<br>";
+		i++;
+	}while(i<5)
+	document.getElementById("demo").innerHTML=x;
+}
+</script>
+</body>
+</html>
