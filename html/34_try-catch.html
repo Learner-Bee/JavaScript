@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<button onclick="message()">click here</button>
+<script>
+function message(){
+    var txt="";
+	try{
+	allert("hello JS");
+    }
+    //try测试代码块
+    //catch 定义在try代码块异常时，执行的代码块
+    //try chach成对出现
+    catch(err){
+        txt="There was an error on this page \n";
+        txt+="Error description:"+err.message+"\n";
+        txt+="Click OK to continue \n "
+    	alert(txt);
+
+    }
+
+}
+</script>
+</body>
+</html>

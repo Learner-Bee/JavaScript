@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>异常抛出test</title>
+</head>
+<body>
+	<p>输入5到10之间的数字</p>
+	<input type="txt" id="content">
+	<button onclick="check()">点击判断</button>
+	<p id="demo"></p>
+	<script>
+	function check(){
+		try{
+			var x=document.getElementById("content").value;
+			if(x==" ")    throw "is empty";
+			if(isNaN(x)) throw "not a number";
+		    if(x<5)      throw "too low";
+		    if(x>10)     throw "too high";
+		}
+		catch(err){
+			document.getElementById("demo").innerHTML=err;
+		}
+	}
+	</script>
+
+
+</body>
+</html>
