@@ -12,7 +12,7 @@
 	function check(){
 		try{
 			var x=document.getElementById("content").value;
-			if(x==" ")    throw "is empty";
+			if(x=="")    throw "is empty";
 			if(isNaN(x)) throw "not a number";
 		    if(x<5)      throw "too low";
 		    if(x>10)     throw "too high";
