@@ -5,13 +5,32 @@
 <button type="button" onclick="myfunction()">check</button>
 <script>
 function myfunction(){
-	var a=document.getElementById('txt').value
-	if(a==''||a==null||a=='undefined'){
-      alert('输入框内容不能为空')
-      return false;
-	}
-	else
-		alert('OK')
+	
+	// alert(undefined == null);	//true 规定
+	// alert(undefined === null);	//false
+	
+	// var a;
+	// alert(a == null);	//true 
+	// alert(a === null);	 //false
+	
+	// alert(a == undefined);	//true 
+	// alert(a === undefined);	//true 
+
+	var a ;
+	alert(a.tostring());
+	// if(a=='undefined'){
+	// 	alert('UN');
+	// }else{
+	// 	alert('ELSE');
+	// }
+	// var b = 'abc';
+	// alert(b === 'abc');	
+	// if(typeof(a) =='undefined'){
+ //      alert(typeof(a));
+ //      return false;
+	// }
+	// else
+	// 	alert('OK')
 }
 
 

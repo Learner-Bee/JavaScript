@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="content">
+    <base href="/">
+    <style type="text/css">
+        label{font-weight:bold !important}
+        hr{
+            border-top:2px dotted #ccc ;
+        }
+        .shop .form-control, .form-control{
+            width: 85%;
+            display: inline-block;
+        }
+
+        .form-textarea{
+            min-height:150px;
+        }
+        .error{
+            color:#a94442;
+        }
+        li{
+            list-style:none;
+        }
+
+    </style>
+    <div class="container ng-scope" ng-app="shop" ng-clock="" ng-controller="ShopController">
+        <div style="border-bottom: 1px dotted #ccc; margin-left: 15px; margin-bottom: 15px; padding: 10px 0; font-size: 18px;">创建商家</div>
+        <div class="form-horizontal">
+            <!-- 商家创建start -->
+            <section>
+                <ng-form name="shopForm" class="shop ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
+                    <div class="form-group">
+                        <label for="is_yc" class="col-sm-2 control-label">选择商家类型</label>
+                        <div class="col-sm-3">
+                            <select id="is_yc" name="is_yc" ng-model="shop.is_yc" class="form-control btn btn-info ng-pristine ng-untouched ng-valid" title="商家类型"><option value="? number:0 ?"></option>
+                                <option value="0" ng-selected="shop.is_yc==0" selected="selected">第三方商家</option>
+                                <option value="1" ng-selected="shop.is_yc==1">易到</option> 
+                            </select>
+                            <span class="error">*</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">商家名称</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" id="name" name="name" data-label="商家名称" ng-model="shop.name" required="" maxlength="30">&nbsp;
+                            <span class="error">*</span>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cellphone" class="col-sm-2 control-label">商家联系电话</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="cellphone" name="cellphone" data-label="商家联系电话" ng-model="shop.cellphone" required="">&nbsp;
+                            <span class="error">*</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">商家邮箱地址</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="email" name="email" data-label="商家邮箱地址" ng-model="shop.email" required="">&nbsp;
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="website" class="col-sm-2 control-label">商家网址</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="website" name="website" data-label="商家网址" ng-model="shop.website" required="">&nbsp;
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">商家地址</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="address" name="address" data-label="商家地址" ng-model="shop.address" required="">&nbsp;
+                            <span class="error">*</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="picture" class="col-sm-2 control-label">商家封面图</label>
+                        <div class="col-sm-3">
+                            <input type="hidden" value="" id="pic" name="pic" ng-model="shop.pic" class="ng-pristine ng-untouched ng-valid">
+                            <input type="file" id="upFile" name="upFile" accept="image/png,image/gif,image/jpg,image/jpeg">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="button" ng-click="FileUpload()" value="上传">
+                        </div>
+                        <div class="col-sm-10">
+                            <p id="showPic"></p>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="introduction" class="col-sm-2 control-label">商家介绍</label>
+                        <div class="col-sm-7">
+                            <textarea class="form-control form-textarea ng-pristine ng-untouched ng-invalid ng-invalid-required" id="introduction" name="introduction" data-label="商家介绍" ng-model="shop.introduction" required=""></textarea>
+
+                        </div>
+                    </div>
+
+                </ng-form>
+            </section>
+
+            <!-- 商家创建end -->
+            <div class="form-group">
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-success" ng-click="shopFormSubmit()()">提交</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <script src="/js/mall/shopadd.js?v=2478319"></script>
+    <script type="text/javascript" src="/vendors/datepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/vendors/datepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script> -->
+
+    </div>
+</body>
+
+</html>
