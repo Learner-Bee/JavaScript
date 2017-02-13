@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<input id="txt">
+<button type="button" onclick="myfunction()">check</button>
+<script>
+function myfunction(){
+	var a=document.getElementById('txt').value
+	if(a==''||a==null||a=='undefined'){
+      alert('输入框内容不能为空')
+      return false;
+	}
+	else
+		alert('OK')
+}
+
+
+</script>
+</body>
+</html>
