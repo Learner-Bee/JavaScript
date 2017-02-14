@@ -16,3 +16,18 @@ JS变量
 *声明变量用var  
 *声明无值的变量，默认其值为undefined  
 *重新声明变量，其值不变：var a="x";var a; 
+##JS数据类型##
+JS数据类型包括数字、数组、字符串、布尔（true/false）、null、undefined、对象
+var x               //x是undefined (undefined表示变量不含有值)
+var x=null          //x是null类型，可以通过将变量值赋值为null来清空变量
+var x='lily'         //x是字符串类型
+var x=true(false)    //x是true(false)类型
+var x=['1','2','3']  //创建名为x的数组
+var x=1 (1.5/123e5)  //JS里只有一种数字类型
+var x={name:"lily",sex:"female",age:20}  //x为对象。对象以{}分隔，对象属性以name:value来定义，属性以逗号隔开
+>难点：JS中==、!=、===、!==的用法和区别
+>var num=1;
+>var str='1';
+>var test=1;
+>test==num //true 数据类型、数值相同
+>
