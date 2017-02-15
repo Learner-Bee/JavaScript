@@ -49,8 +49,24 @@ var x={name:"lily",sex:"female",age:20}  //x为对象。对象以{}分隔，对
  >alert(a==undefined)  //true 因为变量a没有赋值，此时a的值就是undefined  
  >alert(null==getElementById('notExist'))//true 当页面不存在id为'notExist'时，那就是不存在这个对象，所以找到值为null  
  >alert(typeof(undefined)) //undefined   
- >alert(tpyeof(null))//输出object   JS最初实现的错误，现在可以理解为null是一个不存在的对象的占位符
+ >alert(tpyeof(null))//输出object   JS最初实现的错误，现在可以理解为null是一个不存在的对象的占位符  
  >alert(null==undefined)//true  ECMAScript规定两个值相等  
  >alert(null===undefined)//false ===表示严格相等，但数据类型不同，所以false  
- >alert(typeof(null)==typeof(undefined))//false   类型不等，所以false  
+ >alert(typeof(null)==typeof(undefined))//false   类型不等，所以false   
+
+**问题4**   
+>相对路径与绝对路径  
+>绝对路径：顾名思义，是文件在硬盘上存在的真实路径。  
+>缺点：当文件上传到服务器上，会找不到地址  
+>相对路径：相对于当前文件的路径  
+>/ 代表当前文件的根目录   
+>./ 或者不写 表示当前目录  
+>../ 表示上一级目录  
+>../../代表上上级目录。可以多个组合代表上..级目录  
+>/.. 代表下级目录  
+>例:c:/website/web/index.html  
+>　c:/website/img/photo.jpg  
+>　html中引用图片的相对路径为：href=“../img/photo.jpg”  
+>　html文件的当前目录为web,web的上级目录website里有img文件
+
 

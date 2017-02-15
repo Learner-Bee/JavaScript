@@ -6,17 +6,18 @@
 <script>
 function myfunction(){
 	
-	// alert(undefined == null);	//true 规定
-	// alert(undefined === null);	//false
-	
-	// var a;
-	// alert(a == null);	//true 
+	// alert(undefined == null);	//true ECMAScript规定undefined是从null派生出来的，所以值相等
+	// alert(undefined === null);	//false 数据类型不等
+	var b=1;
+	alert(b=='1')
+	 //var a;
+	 //alert(a == null);	//true  a的值是undefined，规定null的值和undefined相等，所以true
 	// alert(a === null);	 //false
 	
 	// alert(a == undefined);	//true 
 	// alert(a === undefined);	//true 
 
-	var a ;
+	//var a ;
 	//alert(a.tostring());
 	// if(a=='undefined'){
 	// 	alert('UN');
@@ -25,10 +26,10 @@ function myfunction(){
 	// }
 	// var b = 'abc';
 	// alert(b === 'abc');	
-	alert(typeof(a)==undefined)
+	alert(undefined==null)
 	//if(typeof(a) =='undefined'){
-     alert(typeof(a));
-     alert(undefined==undefined)
+     //alert(typeof(a));
+   //  alert(undefined==undefined)
     //  return false;
 	//}
 	// else
