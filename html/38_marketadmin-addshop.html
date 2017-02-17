@@ -37,23 +37,27 @@
 							   <option value="0" ng-selected="shop.is_yc==0" selected="selected">第三方商家</option>
 							   <option value="1" ng-selected="shop.is_yc==1">易到</option>
 						    </select>
-						    <span class="error">*</span>
+						    <!--<span class="error">*</span>-->
+						    <label style="color:red">*</label>
+
 						</div>
 					</div>
 					<div class="form-group">
 						<!--class="form-group"用于div，表单样式的类-->
 						<!--col-sm-2指占2列  不加control-label是左对齐，加后右对齐-->
 						<label for="name" class="col-sm-2 control-label">商家名称</label>
-						<div class="col-sm-7">
+						<div class="col-sm-4">
 							<input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required " id="name" name="name" date-label="商家名称" ng-model="shop.name" required maxlength="30">
-							<span class="error">*</span>
+							<!--<span class="error">*</span>-->
+							<label style="color:red">*</label>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="cellphone" class="col-sm-2 control-label ">商家联系电话</label>
 						<div class="col-sm-4">
 							<input type="text" class="  form-control ng-pristine ng-untouched ng-invalid ng-invalid-required " id="cellphone" name="cellphone" date-label="商家联系电话" ng-model="shop.cellphone" required>
-							<span class="error">*</span>
+							<!--<span class="error">*</span>-->
+							<label style="color:red">*</label>
 						</div>
 					</div>
                     <div class="form-group">
@@ -70,16 +74,34 @@
                     </div>
                     <div class="form-group">
                     	<label  for="adress" class="col-sm-2 control-label">商家地址</label>
-                    	<div class="col-sm-10">
+                    	<div class="col-sm-7">
                     		<input type="text" class="form-control ng-pristine ng-untouch ng-invalid ng-invalid-required" id="adress" name="adress" date-label="商家地址" ng-model="shop.adress">
-                    		<span class="error">*</span>
+                    		<!--<span class="error">*</span>-->
+                    		<label style="color:red">*</label>
                     	</div>
                     </div>
                     <div class="form-group">
-                    	<label></label>
+                    	<label for="picture" class="col-sm-2 control-label">商家封面图</label>
+                    	<div class="col-sm-4">
+                    		<input type="hidden" value id="picture" name="picture" ng-model="shop.picture" class="ng-pristine ng-untouched ng-valid">
+                    		<input type="file" id="upfile" name="upfile" accept="image/png/,image/gif,image/jpg,image/jpeg">
+                    	</div>
+                    	<div class="col-sm-3">
+                    		<button ng-click="FileUpLoad()">上传</button>
+                    	</div>
+                    </div>
+                    <div class="form-group">
+                    	<label for="introduction" class="col-sm-2 control-label">商家介绍</label>
+                    	<div class="col-sm-7">
+                    		<input type="textarea" class="form-control  form-textarea ng-pristine ng-untouched ng-invalid" id="introduction" name="introduction">
+                    	</div>
                     </div>
                     </ng-form>
 				</section>
+				<!--创建商家end-->
+				<div class="form-group text-center">
+					<button type="submit" class="btn btn-success"ng-click="shopFormSubmit()">提交</button>
+				</div>
 			</div>
 		</div>
 
