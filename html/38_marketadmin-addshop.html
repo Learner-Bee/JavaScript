@@ -41,18 +41,44 @@
 						</div>
 					</div>
 					<div class="form-group">
-						 <!--class="form-group"用于div，表单样式的类-->
+						<!--class="form-group"用于div，表单样式的类-->
 						<!--col-sm-2指占2列  不加control-label是左对齐，加后右对齐-->
 						<label for="name" class="col-sm-2 control-label">商家名称</label>
 						<div class="col-sm-7">
-							<input type="text" class="form-control ng " id="name" name="name" date-label="商家名称" ng-model="shop.name" required maxlength="30">
+							<input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required " id="name" name="name" date-label="商家名称" ng-model="shop.name" required maxlength="30">
 							<span class="error">*</span>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="cellphone" class="col-sm-2 "></label>
+						<label for="cellphone" class="col-sm-2 control-label ">商家联系电话</label>
+						<div class="col-sm-4">
+							<input type="text" class="  form-control ng-pristine ng-untouched ng-invalid ng-invalid-required " id="cellphone" name="cellphone" date-label="商家联系电话" ng-model="shop.cellphone" required>
+							<span class="error">*</span>
+						</div>
 					</div>
-
+                    <div class="form-group">
+                    	<label for="email" class="col-sm-2 control-label">商家邮箱地址</label>
+                    	<div class="col-sm-4 ">
+                    		<input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required " id="email" name="email" date-label="商家邮箱地址" ng-model="shop.mail">
+                    	</div>
+                    </div>
+                    <div class="form-group">
+                    	<label for="website" class="col-sm-2 control-label">商家网址</label>
+                    	<div class="col-sm-7">
+                    		<input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="website" name="website" date-label="商家网址" ng-model="shop.website">
+                    	</div>
+                    </div>
+                    <div class="form-group">
+                    	<label  for="adress" class="col-sm-2 control-label">商家地址</label>
+                    	<div class="col-sm-10">
+                    		<input type="text" class="form-control ng-pristine ng-untouch ng-invalid ng-invalid-required" id="adress" name="adress" date-label="商家地址" ng-model="shop.adress">
+                    		<span class="error">*</span>
+                    	</div>
+                    </div>
+                    <div class="form-group">
+                    	<label></label>
+                    </div>
+                    </ng-form>
 				</section>
 			</div>
 		</div>
