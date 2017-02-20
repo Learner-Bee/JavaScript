@@ -42,7 +42,7 @@ app.controller('ShopController',['$scope','$location','$http',function($scope,$l
         			//放入文本框
         			$scop.shop.pic=picPath;
         			$('#pic').val(picPath);
-        			$('#showPic').html('<img src="'+picPath'" height="100"/>');
+        			$('#showPic').html('<img src="'+picPath+'" height="100"/>');
         		}else{
         			alert(ret.msg);
         		}
@@ -67,8 +67,17 @@ app.controller('ShopController',['$scope','$location','$http',function($scope,$l
     	}
     	if(cellphone==''||cellphone==null||typeof(cellphone)==undefined){
     		alert('联系电话不能为空');
+            return false;
     	}
-    	if(cellphone)
+    	if(cellphone=/^1[3|4|5|7|8]\d{9}/){
+            alert('手机格式不正确！');
+            return false;
+        }
+        if(email!=''){
+            //var str=/^\w+[-_.]\w*@([\w\d]+[-.])+[\w\d]{2,5}$/
+            var str=/^[A-Za-z\d]+[-_.A-Za-z\d]*@([A-Za-z\d-.])+[A-Za-z\d]{2,5}$/;
+        }
+
     }
 
 
