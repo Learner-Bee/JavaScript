@@ -82,8 +82,6 @@ app.controller('ShopController',['$scope','$location','$http',function($scope,$l
             }
         }
 
-        // comment for test
-
     }
 
 
