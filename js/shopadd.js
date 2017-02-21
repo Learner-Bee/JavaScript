@@ -76,6 +76,10 @@ app.controller('ShopController',['$scope','$location','$http',function($scope,$l
         if(email!=''){
             //var str=/^\w+[-_.]\w*@([\w\d]+[-.])+[\w\d]{2,5}$/
             var str=/^[A-Za-z\d]+[-_.A-Za-z\d]*@([A-Za-z\d-.])+[A-Za-z\d]{2,5}$/;
+            if(!str.test(email)){
+                alert('邮箱格式不正确');
+                return false;
+            }
         }
 
     }
