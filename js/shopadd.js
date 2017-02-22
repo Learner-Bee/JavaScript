@@ -81,7 +81,25 @@ app.controller('ShopController',['$scope','$location','$http',function($scope,$l
                 return false;
             }
         }
+        if(address==''||address==null||address==undefined){
+            alert('商家地址不能为空');
+            return false;
+        }else{
+            if(address.length<10||address.length>50){
+                alert('商家地址不能小于10或大于50个字');
+                return false;
 
+            }
+        }
+
+        $http['post']('/mall/shop/addShop').success(function(data){
+            if (data.code==200) {
+                alert('创建成功');
+                window.location.href='/mall/shop/list';
+            }else{
+                alert(data.msg);
+            }
+        })
     }
 
 
