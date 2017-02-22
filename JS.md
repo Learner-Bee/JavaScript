@@ -69,4 +69,32 @@ var x={name:"lily",sex:"female",age:20}  //x为对象。对象以{}分隔，对
 >　html中引用图片的相对路径为：href=“../img/photo.jpg”  
 >　html文件的当前目录为web,web的上级目录website里有img文件
 
+**问题5**
+>Html中引用CSS的方式都有哪些？  
+>1. 外部样式 ：当样式需要应用到很多页面时 
+> head  
+> link rel="stylesheet" type="text/css" href="mysttle.css"  /head  
+> 2.内部样式  ：单个文件需要特别样式时 。通过head中的style标签定义
+> head  
+> style type="text/css"  
+> body{ background-color:red}  
+> p{margin-lleft}   
+> /style /head   
+> 3. 内联样式  ：当个别元素需要特别样式时。在相关标签中使用样式属性   
+> <p   
+> style="color:red";maigin-left:20px >  
+> 段落内容 p>    
+
+
+ **问题6**  
+> CSS基础语法 ：选择器{属性：值；属性：值}   
+ 
+**问题7**  
+>JS变量命名规则  
+>1. 变量必须以字母开头  
+>2. 也可以$和_开头  
+>3. 变量名对大小写敏感。y和Y是两个变量  
+>4. 不能是关键字  
+>5. 不能有空格
+
 

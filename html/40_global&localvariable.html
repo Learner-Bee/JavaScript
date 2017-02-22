@@ -1,0 +1,15 @@
+<html>
+<body>
+	<button onclick="test()">click</button>
+<script >
+var a=1;
+function test(){
+	alert(a);//局部变量只使用在function（）块内，不作用与if，for，while
+	var a=2;
+	alert(a);
+}
+test();
+alert(a);
+</script>
+</body>
+</html>
