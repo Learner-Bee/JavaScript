@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+var a=10;
+function test(){
+	a=5;
+	alert(a);
+	alert(this.a);
+	var a;
+	alert(this.a);
+	alert(a);
+}
+test();//5,10,10,5
+new test();//5,undefined,undefined,5
+
+</script>
+</body>
+</html>

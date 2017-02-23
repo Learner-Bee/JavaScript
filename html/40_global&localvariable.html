@@ -3,13 +3,22 @@
 	<button onclick="test()">click</button>
 <script >
 var a=1;
-function test(){
-	alert(a);//局部变量只使用在function（）块内，不作用与if，for，while
+function test1(){
+	alert(a);   //undefined a在test()中声明过，所以此处是undefined
+	            //局部变量只使用在function（）块内，不作用与if，for，while
 	var a=2;
-	alert(a);
+	alert(a);   //2
 }
-test();
-alert(a);
+ test1();
+
+function test2(){
+    alert(a);  // 1  test2方法中没有声明a，此时a为全局变量1
+               //error 当全局变量a没有被声明时（即没有var a=1），执行结果error，报错，因为a没有被定义
+               // undefined 当全局变量a被声明，但是没有赋值时(var a;)，执行结果是undefined
+}
+test2();
+
+
 </script>
 </body>
 </html>
