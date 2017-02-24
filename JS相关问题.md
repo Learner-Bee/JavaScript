@@ -96,5 +96,36 @@ var x={name:"lily",sex:"female",age:20}  //x为对象。对象以{}分隔，对
 >3. 变量名对大小写敏感。y和Y是两个变量  
 >4. 不能是关键字  
 >5. 不能有空格
-
-
+ 
+**问题8**
+>JS中this的使用  
+>1.纯粹函数调用 
+>这里的this指的是全局变量，即调用函数对象为Window  
+>var x = 1;   
+>function test() {   
+>this.x = 0;   
+>}   
+>test(); // 执行test()后，将全局变量x设为0 
+>alert(x);//0  此时x为重新赋值的0  
+2.作为方法调用 this指的是调用它的上级对象  
+>function test() {   
+>alert(this.x); 
+>} 
+>var o = {};   
+>o.x = 1;   
+>o.m = test;   
+>o.m(); //1   
+>3.作为构造函数  即生成一个新的对象，此时，this指的就是这个新的对象  
+>function test() {  
+>this.x = 1;   }   
+>var o = new test();   
+>alert(o.x);//1   
+>4. apply调用  apply方法作用是改变函数的调用对象，this指向apply的第一个参数  
+>var x = 0;   
+>function test() { 
+>alert(this.x); } 
+>var o = {};   
+>o.x = 1;   
+>o.m = test;   
+>o.m.apply(); //0  apply参数为空时，表示为this指向全局对象  
+>o.m.apply(o);//1   this指向o 
